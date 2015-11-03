@@ -28,7 +28,11 @@ namespace MarketInvoiceAlert
 
         public bool push_new_updates()
         {
-            throw new NotImplementedException();
+            Message message = new NewPaymentMessage();
+            return _handlers
+                        .Where(x => x.can_handle(message))
+                        .Select(x => x.handle(message))
+                        .All(x => x);
         }
     }
 }

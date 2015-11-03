@@ -10,4 +10,10 @@ namespace MarketInvoiceAlert
     {
         //Basic message class - extend this to create different message types
     }
+
+    class NewPaymentMessage: Message
+    {
+
+    }
+
 }
