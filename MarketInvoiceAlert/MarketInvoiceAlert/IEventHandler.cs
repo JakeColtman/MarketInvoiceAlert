@@ -9,6 +9,6 @@ namespace MarketInvoiceAlert
     interface IEventHandler
     {
         bool can_handle(Message message);
-        bool handle(Message message)
+        bool handle(Message message);
     }
 }
