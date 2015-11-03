@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MarketInvoiceAlert.Telegram
 {
-    class ITelegramAPI
+    interface ITelegramAPI
     {
+        bool send_message(string contents);
     }
 }
