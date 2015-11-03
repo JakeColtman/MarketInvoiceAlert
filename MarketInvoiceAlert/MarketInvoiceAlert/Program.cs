@@ -11,8 +11,10 @@ namespace MarketInvoiceAlert
         static void Main(string[] args)
         {
 
-            IEventHandler dummyHandler = new MockEventHandler();
-            IEventStream dummyStream = new MockAPIStream(new List<IEventHandler>() { dummyHandler });
+            Telegram.ITelegramAPI api = new Telegram.TelegramAPI(HiddenAuth.get_auth(), HiddenAuth.get_chatid());
+
+            IEventHandler teleGramHandler = new Telegram.TelegramEventHandler(api);
+            IEventStream dummyStream = new MockAPIStream(new List<IEventHandler>() { teleGramHandler });
             IMonitor monitor = new Monitor(dummyStream);
 
             monitor.set_off();
