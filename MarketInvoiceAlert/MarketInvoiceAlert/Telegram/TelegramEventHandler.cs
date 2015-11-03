@@ -18,14 +18,21 @@ namespace MarketInvoiceAlert.Telegram
 
         public bool can_handle(Message message)
         {
-            return true;
+            return message is NewPaymentMessage;
         }
 
         public bool handle(Message message)
         {
-            NewPaymentMessage paymentMsg = message as NewPaymentMessage;
-            _api.send_message("Payment message recieved");
-            return true;
+            if(message is NewPaymentMessage)
+            {
+                NewPaymentMessage paymentMsg = message as NewPaymentMessage;
+                _api.send_message("Payment message recieved");
+                return true;
+            }
+            else
+            {
+                throw new NotImplementedException("Message type not supported");
+            }
         }
     }
 }
