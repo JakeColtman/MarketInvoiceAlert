@@ -26,7 +26,7 @@ namespace MarketInvoiceAlert
             return true;
         }
 
-        public bool check_for_updates()
+        public bool push_new_updates()
         {
             throw new NotImplementedException();
         }

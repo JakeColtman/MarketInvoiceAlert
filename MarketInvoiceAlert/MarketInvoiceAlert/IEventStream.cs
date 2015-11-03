@@ -9,6 +9,6 @@ namespace MarketInvoiceAlert
     interface IEventStream
     {
         bool add_handler(IEventHandler handler);
-        bool check_for_updates(); 
+        bool push_new_updates(); 
     }
 }
