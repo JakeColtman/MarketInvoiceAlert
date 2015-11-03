@@ -45,9 +45,11 @@
   <ItemGroup>
     <Compile Include="IEventHandler.cs" />
     <Compile Include="IEventStream.cs" />
+    <Compile Include="IMonitor.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="MockAPIStream.cs" />
     <Compile Include="MockEventHandler.cs" />
+    <Compile Include="Monitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
