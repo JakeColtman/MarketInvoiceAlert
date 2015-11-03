@@ -16,4 +16,9 @@ namespace MarketInvoiceAlert
 
     }
 
+    class NewPaymentWithAmountMessage: Message
+    {
+        public int amount { get; set; }
+    }
+
 }

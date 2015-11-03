@@ -56,6 +56,7 @@
     <Compile Include="Telegram\ITelegramAPI.cs" />
     <Compile Include="Telegram\TelegramAPI.cs" />
     <Compile Include="Telegram\TelegramEventHandler.cs" />
+    <Compile Include="ThresholdHandlerDecorator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
